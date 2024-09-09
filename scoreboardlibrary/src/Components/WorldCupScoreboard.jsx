@@ -37,4 +37,5 @@ const WorldCupScoreboard = () => {
   );
 };
 
+
 export default WorldCupScoreboard;

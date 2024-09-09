@@ -1,5 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './Scoreboard.css';
+
 
 
 const ScoreDisplay = ({ homeScore, awayScore, homeTeam, awayTeam }) => {
@@ -13,6 +15,13 @@ const ScoreDisplay = ({ homeScore, awayScore, homeTeam, awayTeam }) => {
       </p>
     </div>
   );
+};
+
+ScoreDisplay.propTypes = {
+  homeTeam: PropTypes.string.isRequired,
+  awayTeam: PropTypes.string.isRequired,
+  homeScore: PropTypes.number.isRequired,
+  awayScore: PropTypes.number.isRequired,
 };
 
 export default ScoreDisplay;
