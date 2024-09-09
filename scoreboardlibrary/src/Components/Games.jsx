@@ -1,11 +1,13 @@
 import React from "react";
 import ScoreDisplay from "./ScoreDisplay";
+import useScoreUpdater from "../Hooks/useScoreUpdater";
 
 const Game = ({ gameId, homeTeam, awayTeam}) => {
 
  const {state}=useGameContext();
 
-  const { status } = useGameFlow(gameId);
+const { status } = useGameFlow(gameId);
+useScoreUpdater(status==="Playing",gameId);
 
   const currentGames=state.games.find((g)=>g.id===gameId)
 

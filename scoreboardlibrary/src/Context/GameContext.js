@@ -28,7 +28,6 @@ const gameReducer = (state, action) => {
           : game
       );
 
-      console.log(`Game started: ${action.gameId}, Start Order: ${state.startOrderCounter}`);
 
       return {
         ...state,
