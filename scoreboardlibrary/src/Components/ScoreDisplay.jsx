@@ -1,8 +1,10 @@
 import React from "react";
+import './Scoreboard.css';
+
 
 const ScoreDisplay = ({ homeScore, awayScore, homeTeam, awayTeam }) => {
   return (
-    <div>
+    <div >
       <h3>
         {homeTeam} vs {awayTeam}
       </h3>

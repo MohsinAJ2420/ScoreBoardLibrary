@@ -3,6 +3,7 @@ import { useGameContext } from "../Context/GameContext";
 import useGameFlow from "../Hooks/useGameFlow";
 import useScoreUpdater from "../Hooks/useScoreUpdater";
 import ScoreDisplay from "./ScoreDisplay";
+import './Scoreboard.css';
 
 const Game = ({ gameId, homeTeam, awayTeam }) => {
   const { state } = useGameContext();
@@ -20,7 +21,7 @@ const Game = ({ gameId, homeTeam, awayTeam }) => {
         homeScore={currentGames.homeScore}
         awayScore={currentGames.awayScore}
       />
-      <p>Status:{status}</p>
+      <p class="status">Status:{status}</p>
     </div>
   );
 };

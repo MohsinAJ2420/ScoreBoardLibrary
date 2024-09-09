@@ -2,6 +2,7 @@ import React from "react";
 import { useGameContext } from "../Context/GameContext";
 import Game from "./Games";
 import GameSummary from "./GameSummary";
+ import './Scoreboard.css';
 
 const WorldCupScoreboard = () => {
   const { state } = useGameContext();
@@ -17,7 +18,7 @@ const WorldCupScoreboard = () => {
       {allGamesFinished ? (
         <GameSummary />
       ) : (
-        <div>
+        <div className="container">
           {state.games
             .filter(
               (game) => game.status === "Playing" || game.status === "Pending"
