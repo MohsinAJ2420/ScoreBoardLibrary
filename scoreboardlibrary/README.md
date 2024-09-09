@@ -1,26 +1,43 @@
-World Cup Scoreboard App
+
+# **World Cup Scoreboard App**
+
 This is a React app that simulates live football matches with real-time score updates.
 
-Components:
-WorldCupScoreboard: Displays a list of ongoing matches with live score updates. Each match shows the home and away teams, the current score, and the match status (Pending, Playing, Finished).
+## **Components**
 
-GameSummary: Provides a summary of all matches, sorted by total score. If two matches have the same total score, the match that was added later to the system is shown first.
+- **`WorldCupScoreboard`**:  
+  Displays a list of ongoing matches with live score updates. Each match shows the home and away teams, the current score, and the match status (Pending, Playing, Finished).
 
-Hooks:
+- **`GameSummary`**:  
+  Provides a summary of all matches, sorted by total score. If two matches have the same total score, the match that was added later to the system is shown first.
 
-useGameFlow: Manages the game state (starting, playing, and finishing games).
-useScoreUpdater: Updates the score for games while they're in the "Playing" state.
-useRandomTimeout: Adds random delays to the game flow for a more dynamic experience.
-GameContext: Stores and manages the state of all games ,I have used useContext
+## **Hooks**
 
-Styling:
-I’ve added some basic styling to the components to ensure everything is readable and presentable. Due to time constraints, I focused on keeping the layout simple and clean.
+- **`useGameFlow`**:  
+  Manages the game state (starting, playing, and finishing games).
 
-Tests:
-Each component is tested .
+- **`useScoreUpdater`**:  
+  Updates the score for games while they are in the "Playing" state.
 
-How it Works:
-Games move from "Pending" to "Playing" automatically with random start and finish times.
-While games are "Playing," scores update randomly every few seconds.
-Once a game is finished ,it disappear from scoreboard
-When All games are finsihed ,The Game Summary ranks matches by total score.
+- **`useRandomTimeout`**:  
+  Adds random delays to the game flow for a more dynamic experience.
+
+## **Context**
+
+- **`GameContext`**:  
+  Stores and manages the state of all games using the `useContext` and `useReducer` hooks.
+
+## **Styling**
+
+I've added basic styling to the components to ensure readability and a presentable UI. Due to time constraints, the layout is kept simple and clean.
+
+## **Tests**
+
+Each component is tested to ensure that the game flow and updates work correctly.
+
+## **How it Works**
+
+- Games automatically transition from "Pending" to "Playing" with random start and finish times.
+- While games are "Playing," scores are updated randomly every few seconds.
+- Once a game finishes, it disappears from the scoreboard.
+- When all games have finished, the **Game Summary** ranks matches by total score and entry order.
