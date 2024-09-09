@@ -1,6 +1,8 @@
 import React from "react";
-import ScoreDisplay from "./ScoreDisplay";
+import { useGameContext } from "../Context/GameContext";
+import useGameFlow from "../Hooks/useGameFlow";
 import useScoreUpdater from "../Hooks/useScoreUpdater";
+import ScoreDisplay from "./ScoreDisplay";
 
 const Game = ({ gameId, homeTeam, awayTeam }) => {
   const { state } = useGameContext();

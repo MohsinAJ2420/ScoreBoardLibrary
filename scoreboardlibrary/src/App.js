@@ -1,12 +1,13 @@
+import React from "react";
+import { GameProvider } from "./Context/GameContext";
+import WorldCupScoreboard from "./Components/WorldCupScoreboard";
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    
-
-    </div>
+    <GameProvider>
+      <WorldCupScoreboard />
+    </GameProvider>
   );
-}
+};
 
 export default App;
