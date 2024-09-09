@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import GameSummary from "./GameSummary";
-import { useGameContext } from "../Context/GameContext";
+import { useGameContext } from "../../Context/GameContext";
 
 jest.mock("../Context/GameContext");
 
@@ -13,7 +13,7 @@ describe("GameSummary Component", () => {
         awayTeam: "Valencia",
         homeScore: 2,
         awayScore: 2,
-        addedOrder: 1,
+        startOrder: 1,
       },
       {
         id: "game2",
@@ -21,7 +21,7 @@ describe("GameSummary Component", () => {
         awayTeam: "Manchester United",
         homeScore: 2,
         awayScore: 2,
-        addedOrder: 2,
+        startOrder: 2,
       },
       {
         id: "game3",
@@ -29,7 +29,7 @@ describe("GameSummary Component", () => {
         awayTeam: "Real Madrid",
         homeScore: 3,
         awayScore: 2,
-        addedOrder: 3,
+        startOrder: 3,
       },
     ];
 

@@ -1,8 +1,7 @@
 import React from "react";
-import { useGameContext } from "../Context/GameContext";
-import Game from "./Games";
-import GameSummary from "./GameSummary";
- import './Scoreboard.css';
+import { useGameContext } from "../../Context/GameContext";
+import Game from "../Games/Games";
+import GameSummary from "../GameSummary/GameSummary";
 
 const WorldCupScoreboard = () => {
   const { state } = useGameContext();

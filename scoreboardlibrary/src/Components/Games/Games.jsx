@@ -1,10 +1,9 @@
 import React from "react";
-import { useGameContext } from "../Context/GameContext";
-import useGameFlow from "../Hooks/useGameFlow";
-import useScoreUpdater from "../Hooks/useScoreUpdater";
-import ScoreDisplay from "./ScoreDisplay";
-import "./Scoreboard.css";
+import { useGameContext } from "../../Context/GameContext";
+import useGameFlow from "../../Hooks/useGameFlow";
+import useScoreUpdater from "../../Hooks/useScoreUpdater";
 import PropTypes from "prop-types";
+import ScoreDisplay from "../ScoreDisplay/ScoreDisplay";
 
 const Game = ({ gameId, homeTeam, awayTeam }) => {
   const { state } = useGameContext();

@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Game from "./Games";
-import { useGameContext } from "../Context/GameContext";
-import useGameFlow from "../Hooks/useGameFlow";
-import useScoreUpdater from "../Hooks/useScoreUpdater";
+import { useGameContext } from "../../Context/GameContext";
+import useGameFlow from "../../Hooks/useGameFlow";
+import useScoreUpdater from "../../Hooks/useScoreUpdater";
 
 jest.mock("../Context/GameContext");
 jest.mock("../Hooks/useGameFlow");

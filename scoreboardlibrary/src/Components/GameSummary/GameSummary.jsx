@@ -1,5 +1,5 @@
 import React from "react";
-import { useGameContext } from "../Context/GameContext";
+import { useGameContext } from "../../Context/GameContext";
 
 const GameSummary = () => {
   const { state } = useGameContext();
@@ -9,7 +9,13 @@ const GameSummary = () => {
       ...game,
       totalScore: game.homeScore + game.awayScore,
     }))
-    .sort((a, b) => b.totalScore - a.totalScore || b.addedOrder - a.addedOrder);
+    .sort((a, b) => {
+      if (b.totalScore !== a.totalScore) {
+        return b.totalScore - a.totalScore;
+      }
+      return b.startOrder - a.startOrder;
+    });
+
 
   return (
     <div className="container">

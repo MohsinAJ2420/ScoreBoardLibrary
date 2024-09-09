@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import WorldCupScoreboard from "./WorldCupScoreboard";
-import { useGameContext } from "../Context/GameContext";
+import { useGameContext } from "../../Context/GameContext";
 import Game from "./Games";
-import GameSummary from "./GameSummary";
+import GameSummary from "../GameSummary/GameSummary";
 
 jest.mock("../Context/GameContext");
 jest.mock("./Games");
@@ -30,7 +30,7 @@ describe("WorldCupScoreboard Component", () => {
     render(<WorldCupScoreboard />);
 
     expect(screen.getByText("Spain vs Italy")).toBeInTheDocument();
-    expect(GameSummary).not.toBeCalled();
+    expect(GameSummary).not.toHaveBeenCalled();
   });
 
   it("should render the GameSummary when all games are finished", () => {
@@ -45,6 +45,6 @@ describe("WorldCupScoreboard Component", () => {
 
     render(<WorldCupScoreboard />);
 
-    expect(GameSummary).toBeCalled();
+    expect(GameSummary).toHaveBeenCalled();
   });
 });
