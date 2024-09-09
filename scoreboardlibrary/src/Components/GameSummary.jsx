@@ -7,13 +7,13 @@ const GameSummary = () => {
   const sortedGames = [...state.games]
     .map((game) => ({
       ...game,
-      totalScore: game.homeScore + game.awayScore 
+      totalScore: game.homeScore + game.awayScore,
     }))
     .sort((a, b) => {
       if (b.totalScore !== a.totalScore) {
-        return b.totalScore - a.totalScore; 
+        return b.totalScore - a.totalScore;
       }
-      return b.addedOrder - a.addedOrder; 
+      return b.addedOrder - a.addedOrder;
     });
 
   return (
@@ -31,6 +31,3 @@ const GameSummary = () => {
 };
 
 export default GameSummary;
-
-
-
